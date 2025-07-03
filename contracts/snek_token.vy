@@ -1,4 +1,4 @@
-#pragma version 0.4.3
+# pragma version 0.4.3
 """
 @license MIT
 @title Snek Token
@@ -6,6 +6,7 @@
 @notice This is my ERC20 in vyper
 """
 from ethereum.ercs import IERC20
+
 implements: IERC20
 
 from pcaversaccio.snekmate.src.snekmate.auth import ownable
@@ -20,6 +21,7 @@ NAME: constant(String[25]) = "Snek Token"
 SYMBOL: constant(String[5]) = "SNEK"
 DECIMALS: constant(uint8) = 18
 EIP712_VERSION: constant(String[20]) = "1"
+
 
 @deploy
 def __init__(initial_supply: uint256):
